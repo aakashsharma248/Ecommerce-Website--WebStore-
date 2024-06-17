@@ -67,16 +67,18 @@ function App() {
     getStripeApiKey();
   }, []);
 
+  if(user) getStripeApiKey();
+
   window.addEventListener("contextmenu", (e) => e.preventDefault());
 
   return (
     <Router>
       {/* <Header /> */}
       <Navbar />
-
+      
       {isAuthenticated && <UserOptions user={user} />}
 
-      {stripeApiKey && (
+             {stripeApiKey && (
         <Elements stripe={loadStripe(stripeApiKey)}>
           <ProtectedRoute exact path="/process/payment" component={Payment} />
         </Elements>
