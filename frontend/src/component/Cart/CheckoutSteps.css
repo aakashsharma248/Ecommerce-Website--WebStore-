@@ -1,0 +1,21 @@
+.MuiStepConnector-line {
+  display: none !important;
+}
+
+.MuiStepConnector-root {
+  height: 1px;
+  background-color: rgba(0, 0, 0, 0.349);
+}
+
+.MuiStepConnector-active,
+.MuiStepConnector-completed {
+  background-color: tomato;
+}
+
+.MuiTypography-body1 {
+  font-size: 1.8rem !important; /* Adjust the font size as needed */
+}
+
+.MuiSvgIcon-root{
+  font-size: 2.2rem !important; /* Adjust the font size as needed */
+}
